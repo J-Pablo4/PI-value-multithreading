@@ -12,18 +12,18 @@
 int main(int argc, char **argv)
 {
 	long long start_ts;
-    long long stop_ts;
-    long long elapsed_time;
-    struct timeval ts;
+	long long stop_ts;
+	long long elapsed_time;
+	struct timeval ts;
+	
+	float x = 0;
+    	double sum_x = 0;
+    	double func_eval = 0;
+    	float delta_x;
+    	double total = 0;
 
-    float x = 0;
-    double sum_x = 0;
-    double func_eval = 0;
-    float delta_x;
-    double total = 0;
-
-    gettimeofday(&ts, NULL);
-    start_ts = ts.tv_sec; // Tiempo inicial
+    	gettimeofday(&ts, NULL);
+    	start_ts = ts.tv_sec; // Tiempo inicial
     
 	delta_x = (UPPER_LIMIT - LOWER_LIMIT) / (float)NUMBER_OF_TRAPEZES;
 
@@ -39,19 +39,19 @@ int main(int argc, char **argv)
 	sum_x += func_eval;
 
 	x = (float)LOWER_LIMIT + ((double)NUMBER_OF_TRAPEZES * delta_x);
-    func_eval = sqrt(1 - (x*x));
-    sum_x += func_eval;
+    	func_eval = sqrt(1 - (x*x));
+    	sum_x += func_eval;
 
-    sum_x *= delta_x;
-    sum_x /= 2.0;
+    	sum_x *= delta_x;
+    	sum_x /= 2.0;
 
-    printf("Area bajo la curva por 4: %.30lf\n", sum_x * 4.0);
+    	printf("Area bajo la curva por 4: %.30lf\n", sum_x * 4.0);
 
 	gettimeofday(&ts, NULL);
-    stop_ts = ts.tv_sec; // Tiempo final
-    elapsed_time = stop_ts - start_ts;
+    	stop_ts = ts.tv_sec; // Tiempo final
+    	elapsed_time = stop_ts - start_ts;
 
-    printf("------------------------------\n");
-    printf("TIEMPO TOTAL, %lld segundos\n",elapsed_time);
+    	printf("------------------------------\n");
+    	printf("TIEMPO TOTAL, %lld segundos\n",elapsed_time);
 	return 0;
 }
