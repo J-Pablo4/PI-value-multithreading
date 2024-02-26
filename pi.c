@@ -4,6 +4,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+#define LOWER_LIMIT 0
+#define UPPER_LIMIT 1
+#define NUMBER_OF_TRAPEZES 1000000
+
 int main(int argc, char **argv)
 {
 	long long start_ts;
@@ -14,16 +18,18 @@ int main(int argc, char **argv)
     gettimeofday(&ts, NULL);
     start_ts = ts.tv_sec; // Tiempo inicial
     
-	long long x = 15;
-	for(long long i = 0; i < 4; i++)
+	float delta_x = (UPPER_LIMIT - LOWER_LIMIT) / (float)NUMBER_OF_TRAPEZES;
+
+	for(long long i = 0; i < NUMBER_OF_TRAPEZES - 2; i++)
 	{
-		x *= 2;
-		sleep(1);
+		
 	}
 
 	gettimeofday(&ts, NULL);
     stop_ts = ts.tv_sec; // Tiempo final
     elapsed_time = stop_ts - start_ts;
+
+    printf("delta x: %.60f\n", delta_x);
 
     printf("------------------------------\n");
     printf("TIEMPO TOTAL, %lld segundos\n",elapsed_time);
