@@ -45,7 +45,7 @@ int main(int argc, char **argv)
     	sum_x *= delta_x;
     	sum_x /= 2.0;
 
-    	printf("Area bajo la curva por 4: %.30lf\n", sum_x * 4.0);
+    	printf("Valor de PI: %.15lf\n", sum_x * 4.0);
 
 	gettimeofday(&ts, NULL);
     	stop_ts = ts.tv_sec; // Tiempo final
