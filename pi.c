@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 		x = (float)LOWER_LIMIT + (i * delta_x);
 		func_eval = (sqrt(1 - (x*x))*2);
 		sum_x += func_eval;
+		printf("i: %Lf\n", i);
 	}
 
 	x = (float)LOWER_LIMIT + (0.0 * delta_x);
