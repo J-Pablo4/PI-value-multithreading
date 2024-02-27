@@ -7,7 +7,7 @@
 
 #define LOWER_LIMIT 0
 #define UPPER_LIMIT 1
-#define NUMBER_OF_TRAPEZES 999999999
+#define NUMBER_OF_TRAPEZES 99999999
 
 int main(int argc, char **argv)
 {
