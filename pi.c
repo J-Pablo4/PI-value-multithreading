@@ -1,3 +1,8 @@
+/*
+Nelly Garcia Sanchez
+Juan Pablo Lopez Zuñiga
+Equipo: Quokka
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
