@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     	sum_x *= delta_x; //delta x * sumatoria de todas las areas
     	sum_x /= 2.0; //sumatoria de todas las areas entre 2
 
-    	printf("Valor de PI: %.15lf\n", sum_x * 4.0);
+    	printf("Valor de PI: %.10lf\n", sum_x * 4.0);
 
 	gettimeofday(&ts, NULL); //Toma el tiempo final de la computadpra
     	stop_ts = ts.tv_sec; // Tiempo final
