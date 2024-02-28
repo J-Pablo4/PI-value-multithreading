@@ -116,7 +116,7 @@ void lock(int thread)
         	max_ticket = ticket > max_ticket ? ticket : max_ticket;
     	}
 
-    	// Asignacion a nuestro thread el tueno mas alto mas 1
+    	// Asignacion al thread actual el turno mas alto mas 1
     	tickets[thread] = max_ticket + 1;
 
     	MEMBAR;
