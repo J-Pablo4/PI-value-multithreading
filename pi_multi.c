@@ -15,7 +15,7 @@ Equipo: Quokka
 
 #define LOWER_LIMIT 0 //Empieza el 1/4 del circulito
 #define UPPER_LIMIT 1 //Termina el 1/4 del circulito
-#define NUMBER_OF_TRAPEZES 999999999  //Cuantos trapecios tiene el circulito (osease n)
+#define NUMBER_OF_TRAPEZES 99999999  //Cuantos trapecios tiene el circulito (osease n)
 #define NTHREADS 9 //Numero de threads
 #define MEMBAR __sync_synchronize()
 
